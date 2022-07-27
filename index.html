@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./pong.ico" />
+    <title>Pong</title>
+  </head>
+  <body>
+    <div id="game-container">
+      <div
+        id="player1"
+        class="bar"
+        style="left: var(--offset); top: calc(50vh - var(--bar-size) * 5)"
+      ></div>
+      <div id="ball"></div>
+      <div
+        id="player2"
+        class="bar"
+        style="
+          left: calc(100vw - var(--bar-size) - var(--offset));
+          top: calc(50vh - var(--bar-size) * 5);
+        "
+      ></div>
+      <button id="start">Start</button>
+      <div class="playerHint" style="left: 25%;">
+        <div>Player 1:</div>
+        <div>Use <strong>W</strong> And <strong>S</strong> to Move</div>
+      </div>
+      <div class="playerHint" style="left: 75%;">
+        <div>Player 2:</div>
+        <div>Use <strong>↑</strong> And <strong>↓</strong> to Move</div>
+      </div>
+      <div class="countdown">1</div>
+      <div class="winner">Player 2 Wins</div>
+      <button id="playAgain">Play Again</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

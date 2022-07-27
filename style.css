@@ -1,0 +1,123 @@
+* {
+    font-family: monospace;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    background-color: #252525;
+    overflow: hidden;
+}
+
+.bar {
+    --offset: 2vw;
+    --bar-size: 1vw;
+    position: absolute;
+    width: var(--bar-size);
+    height: calc(10 * var(--bar-size));
+    background-color: #FFF;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#ball {
+    display: none;
+    --ball-size: 2vw !important;
+    position: absolute;
+    left: calc(50vw - var(--ball-size) / 2);
+    top: calc(50vh - var(--ball-size) / 2);
+    width: var(--ball-size) !important;
+    height: var(--ball-size) !important;
+    background-color: #FFF;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+#start {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border: solid 0.4vw #FFF;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    padding: 1.4vw 2vw;
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+#start:hover {
+    background-color: #FFF;
+    color: #252525;
+}
+
+.countdown {
+    display: none;
+    position: absolute;
+    width: 16vw;
+    height: min-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #FFF;
+    font-size: 6vw;
+    text-align: center;
+}
+
+.winner {
+    display: none;
+    position: absolute;
+    width: 48vw;
+    height: min-content;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #FFF;
+    font-size: 6vw;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#playAgain {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border: solid 0.4vw #FFF;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    padding: 1.4vw 2vw;
+    opacity: 0;
+    transition: background-color 0.2s linear, color 0.2s linear, opacity 0.5s;
+}
+
+#playAgain:hover {
+    background-color: #FFF;
+    color: #252525;
+}
+
+.playerHint {
+    opacity: 1;
+    display: block;
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    text-align: center;
+    white-space: nowrap;
+    transition: opacity 0.2s linear;
+}
